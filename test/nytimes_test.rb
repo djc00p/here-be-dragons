@@ -26,6 +26,9 @@ class NytimesTest < Minitest::Test
   end
 
   def test_it_can_get_all_stories_with_subsection_of_politics
+    result =  @hash[:results].select do |subsec|
+      subsec[:subsection] == "Politics"
+    end
     #Set your code to the local variable, "result"
 
 
