@@ -18,6 +18,7 @@ class NytimesTest < Minitest::Test
   end
 
   def test_it_can_get_array_of_stories
+    result = @hash[:results]
     #Set your code to the local variable, "result"
 
     assert result.is_a? (Array)
