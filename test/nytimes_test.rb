@@ -11,6 +11,7 @@ class NytimesTest < Minitest::Test
   end
 
   def test_it_can_get_copyright
+    result = @hash[:copyright]
     #Set your code to the local variable, "result"
 
     assert result, "Copyright (c) 2018 The New York Times Company. All Rights Reserved."
@@ -30,9 +31,8 @@ class NytimesTest < Minitest::Test
     assert result.is_a? (Array)
     assert_equal 6, result.count
     assert_equal "Congressional G.O.P. Agenda Quietly Falls Into Place Even as Trump Steals the Spotlight",
-      result.first[:title]
+    result.first[:title]
     assert_equal "Conspiracy Theories Made Alex Jones Very Rich. They May Bring Him Down.",
-      result.last[:title]
+    result.last[:title]
   end
-
 end
